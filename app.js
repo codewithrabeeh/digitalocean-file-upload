@@ -16,7 +16,7 @@ const s3 = new AWS.S3({
 });
 
 // File path of the image you want to upload
-const filePath = 'cat.jpg'; // Replace with the actual file path
+const filePath = 'test.jpg'; // Replace with the actual file path
 
 // Read the file data
 const fileContent = fs.readFileSync(filePath);
@@ -24,7 +24,7 @@ const fileContent = fs.readFileSync(filePath);
 // Set the parameters for the object upload
 const params = {
   Bucket: bucketName,
-  Key: 'cat.jpg', // The name you want to give to the object in the bucket
+  Key: 'test.jpg', // The name you want to give to the object in the bucket
   Body: fileContent,
   ACL: 'public-read', // Make the uploaded file publicly accessible
 };
